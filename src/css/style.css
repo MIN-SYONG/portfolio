@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import url(setting/reset.css);
+@import url(setting/fonts.css);
+@import url(setting/vars.css);
+@import '@splidejs/splide/css';
+
+@import url(section/intro.css);
+@import url(section/menu.css);
+@import url(section/main.css);
+@import url(section/project.css);
+@import url(section/work.css);
+@import url(section/about.css);
+@import url(section/contact.css);
+
+/* -------------- */
+.side_box {
+    position: fixed;
+    left: 0;
+    width: 5vw;
+    height: 15vw;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--white);
+    font-family: var(--mainEng-font);
+    font-size: 2vw;
+    padding-top: .3vw;
+}
+
+span.initial {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+span.vertical_box {
+    rotate: -90deg;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+}
+
+.menu_btn {
+    position: fixed;
+    top: 4vw;
+    right: 3.5vw;
+    width: 2vw;
+    height: 1.5vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu_btn span.bar {
+    background: var(--white);
+    width: 100%;
+    display: block;
+    height: .1vw;
+}
+
+.menu_btn span.bar::before {
+    content: '';
+    background: var(--white);
+    height: .1vw;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .35s;
+}
+
+.menu_btn span.bar::after {
+    content: '';
+    background: var(--white);
+    height: .1vw;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .35s;
+}
+
+.menu_btn.on span.bar {
+    height: 0;
+}
+
+.menu_btn.on span.bar::before {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.menu_btn.on span.bar::after {
+    transform: rotate(-45deg);
+    bottom: 43%;
+}

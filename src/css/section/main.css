@@ -1,0 +1,271 @@
+section#main {
+    width: 100%;
+    height: 100vh;
+    background: var(--black);
+    padding: 2.5vw;
+    overflow: hidden;
+}
+
+#main .main_wrap {
+    width: 98%;
+    height: 100%;
+    padding: 3vw 0 2vw;
+    position: relative;
+    margin: auto;
+}
+
+#main .main_wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--white);
+    transition: .5s;
+
+}
+
+#main .main_wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 4px;
+    background: var(--white);
+    transition: .5s;
+}
+
+#main .main_wrap.on::before{width: 100%;}
+#main .main_wrap.on::after{width: 100%;}
+
+.main_wrap h1 {
+    font-size: 3.5vw;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 6vw;
+    font-family: var(--mainEng-font);
+    font-weight: normal;
+    opacity: 0;
+}
+
+.main_wrap.on h1{
+    animation: tracking-in-expand-fwd .8s cubic-bezier(.215, .61, .355, 1.000) both;
+    animation-delay: 3s;
+    
+}
+
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -.5em;
+        transform: translateZ(-700px);
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        transform: translateZ(0);
+        opacity: 1
+    }
+}
+
+.main_wrap img {
+    width: 100%;
+}
+
+.main_wrap .chess_box {
+    width: 17.5vw;
+    height: 17.5vw;
+    margin: auto;
+    position: relative;
+    rotate: 45deg;
+}
+
+.main_wrap .chess_box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--white);
+    width: 18.5vw;
+    height: 18.5vw;
+    animation: opacity1 2s linear infinite;
+}
+
+.main_wrap .chess_box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--white);
+    width: 19.5vw;
+    height: 19.5vw;
+    animation: opacity2 2s linear infinite;
+}
+
+@keyframes opacity1 {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity2 {
+
+    0%,
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1,
+    }
+}
+
+.main_wrap .chess_piece_box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main_wrap .chess_piece {
+    width: 5vw;
+    height: 10vw;
+    position: absolute;
+}
+
+@keyframes upDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-.3vw);
+    }
+}
+
+
+.main_wrap .chess_piece.knight {
+    top: 50%;
+    left: 7%;
+    rotate: 15deg;
+    animation: upDown 5s linear infinite;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.main_wrap .chess_piece.rook {
+    top: 20%;
+    left: 20%;
+    rotate: -30deg;
+    animation: upDown 4s linear infinite;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1.5s;
+}
+
+.main_wrap .chess_piece.queen {
+    top: 65%;
+    left: 30%;
+    rotate: 15deg;
+    animation: upDown 6s linear infinite;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 2s;
+}
+
+.main_wrap .chess_piece.bishop {
+    top: 18%;
+    right: 28%;
+    rotate: 30deg;
+    animation: upDown 5s linear infinite;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 2.5s;
+}
+
+.main_wrap .chess_piece.king {
+    top: 65%;
+    right: 20%;
+    rotate: -15deg;
+    animation: upDown 4s linear infinite;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 3s;
+}
+
+.main_wrap .chess_piece.pawn {
+    top: 23%;
+    right: 8%;
+    rotate: -15deg;
+    animation: upDown 6s linear infinite;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 3.5s;
+}
+
+.main_wrap.on .chess_piece {
+    opacity: 1;
+}
+
+.main_wrap .scroll_down {
+    width: 3.5vw;
+    height: 5vw;
+    margin: 6.5vw auto 0;
+}
+
+.main_wrap .scroll_down span {
+    display: block;
+    color: var(--white);
+    font-size: 12px;
+    margin: 0 auto .5vw;
+    font-family: var(--mainEng-font);
+}
+
+.main_wrap .scroll_down .mouse_shape {
+    border: 1px solid var(--white);
+    width: 100%;
+    height: 95%;
+    border-radius: 99px;
+    position: relative;
+}
+
+.main_wrap .scroll_down .mouse_shape::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: .2vw;
+    height: .5vw;
+    background: var(--white);
+    border-radius: 99px;
+    animation: wheel 1.5s infinite linear;
+}
+
+@keyframes wheel {
+    0% {
+        top: 10%;
+    }
+
+    100% {
+        top: 30%;
+    }
+
+}

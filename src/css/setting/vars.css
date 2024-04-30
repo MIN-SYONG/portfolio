@@ -1,0 +1,15 @@
+:root{
+    --mainKor-font: "WarhavenB";
+    --mainEng-font: "Lora", serif;
+    --sign-font: "Pinyon Script", cursive;
+
+    --white: #fff;
+    --black: #000;
+    --red: #ff0000;
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+}
