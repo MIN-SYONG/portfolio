@@ -6,7 +6,6 @@ import {about} from "./about.js"
 import {contact} from "./contact.js"
 import {splide} from "./splide.js"
 import { Gsap } from "./gsap.js";
-import { swiper } from "./swiper.js";
 
 window.addEventListener('load', function(){
   intro()
@@ -17,5 +16,4 @@ window.addEventListener('load', function(){
   work()
   about()
   contact()
-  swiper()
 })

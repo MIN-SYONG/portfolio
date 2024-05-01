@@ -1,10 +1,11 @@
 :root{
-    --mainKor-font: "WarhavenB";
+    --mainKor-font: 'Danjo-bold-Regular';
     --mainEng-font: "Lora", serif;
     --sign-font: "Pinyon Script", cursive;
 
     --white: #fff;
     --black: #000;
+    --black100:#333;
     --red: #ff0000;
 
     -webkit-text-size-adjust: 100%;

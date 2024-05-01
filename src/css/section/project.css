@@ -103,9 +103,6 @@ section#project{
     font-family: var(--mainEng-font);
 }
 
-
-
-
 /* white_area--------------------------------- */
 #project article.white_area{
     position: relative;
@@ -153,3 +150,17 @@ section#project{
 }
 
 /* white_area figure--------------------------------- */
+
+.white_area figure h3{
+    text-align: left;
+    font-family: var(--mainEng-font);
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.white_area figure p{
+    font-family: var(--mainKor-font);
+    font-weight: 500;
+    color: var(--black);
+    text-align: left;
+}

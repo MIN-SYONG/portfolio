@@ -99,10 +99,15 @@ span.vertical_box {
     bottom: 43%;
 }
 
-.swiper {
+.swiper.project_slide1 {
     width: 30vw;
     height: 32vw;
-  }
+}
+
+.swiper.project_slide2 {
+    width: 30vw;
+    height: 20vw;
+}
 
   .swiper-slide {
     text-align: center;
