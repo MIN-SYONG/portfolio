@@ -13,3 +13,7 @@
     text-rendering: optimizeLegibility;
     font-synthesis: none;
 }
+
+body{
+    background: var(--black);
+}

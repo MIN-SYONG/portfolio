@@ -4,6 +4,11 @@ section#main {
     background: var(--black);
     padding: 2.5vw;
     overflow: hidden;
+    display: none;
+}
+
+section#main.on{
+    display: block;
 }
 
 #main .main_wrap {
@@ -51,7 +56,7 @@ section#main {
 }
 
 .main_wrap.on h1{
-    animation: tracking-in-expand-fwd .8s cubic-bezier(.215, .61, .355, 1.000) both;
+    animation: tracking-in-expand-fwd .8s cubic-bezier(.215, .61, .355, 1.000) forwards;
     animation-delay: 3s;
     
 }
@@ -60,16 +65,15 @@ section#main {
     0% {
         letter-spacing: -.5em;
         transform: translateZ(-700px);
-        opacity: 0
     }
 
     40% {
-        opacity: .6
+        opacity: .6;
     }
 
     100% {
         transform: translateZ(0);
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -83,6 +87,7 @@ section#main {
     margin: auto;
     position: relative;
     rotate: 45deg;
+    z-index: 1;
 }
 
 .main_wrap .chess_box::before {
@@ -129,7 +134,7 @@ section#main {
     }
 
     100% {
-        opacity: 1,
+        opacity: 1;
     }
 }
 

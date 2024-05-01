@@ -1,4 +1,155 @@
 section#project{
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
+
+#project .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 8vw;
+    font-family: var(--mainEng-font);
+    font-weight: 500;
+}
+
+#project .project_wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+/* black_area--------------------------------- */
+#project article.black_area{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#project article.black_area .header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: .5vw;
+    padding-left: 3vw;
+}
+
+#project article.black_area .header::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: var(--white);
+    position: absolute;
+    bottom: -.3vw;
+    right: 0;
+    transition: .5s;
+}
+
+#project article.black_area .header.on::after{
+    width: calc(100% - 3vw);
+}
+
+#project article.black_area .header span{
+    color: var(--white);
+    font-size: 2vw;
+    display: block;
+    font-family: var(--mainEng-font);
+    opacity: 0;
+    transition: .5s;
+}
+
+#project article.black_area .header.on span{
+    opacity: 1;
+}
+
+/* black_area figure--------------------------------- */
+
+#project .project_ex{
+    width: 100%;
+    height: 85%;
+}
+
+#project .project_ex:nth-child(1){
+    background-image: url();
+}
+#project .project_ex:nth-child(2){
+    background-image: url();
+}
+#project .project_ex:nth-child(3){
+    background-image: url();
+}
+
+#project ul.btns{
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+}
+
+#project ul.btns li a{
+    border: 1px solid var(--white);
+    display: block;
+    width: 7vw;
+    padding: .4vw .8vw;
+    color: var(--white);
+    font-family: var(--mainEng-font);
+}
+
+
+
+
+/* white_area--------------------------------- */
+#project article.white_area{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: var(--white);    
+}
+
+#project article.white_area .header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: .5vw;
+    padding-right: 3vw;   
+}
+
+#project article.white_area .header::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: var(--black);
+    position: absolute;
+    bottom: -.3vw;
+    left: 0;
+    transition: .5s;
+}
+
+#project article.white_area .header.on::after{
+    width: calc(100% - 3vw);
+}
+
+#project article.white_area .header span{
+    color: var(--black);
+    font-size: 2vw;
+    display: block;
+    text-align: end;
+    font-family: var(--mainEng-font);
+    opacity: 0;
+    transition: .5s;
+}
+
+#project article.white_area .header.on span{
+    opacity: 1;
+}
+
+/* white_area figure--------------------------------- */

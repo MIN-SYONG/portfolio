@@ -4,6 +4,7 @@
 @import url(setting/fonts.css);
 @import url(setting/vars.css);
 @import '@splidejs/splide/css';
+@import 'swiper/css';
 
 @import url(section/intro.css);
 @import url(section/menu.css);
@@ -25,6 +26,7 @@
     font-family: var(--mainEng-font);
     font-size: 2vw;
     padding-top: .3vw;
+    z-index: 11;
 }
 
 span.initial {
@@ -51,6 +53,7 @@ span.vertical_box {
     display: flex;
     align-items: center;
     cursor: pointer;
+    z-index: 11;
 }
 
 .menu_btn span.bar {
@@ -95,3 +98,21 @@ span.vertical_box {
     transform: rotate(-45deg);
     bottom: 43%;
 }
+
+.swiper {
+    width: 30vw;
+    height: 32vw;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ff0;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
